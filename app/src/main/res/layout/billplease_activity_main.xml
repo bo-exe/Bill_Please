@@ -5,15 +5,8 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewAmount"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="#EAB8FF"
-        android:text="@string/bill_please" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/amount" />
 
@@ -22,27 +15,25 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amountText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/enter_amount" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/num_of_pax" />
-
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewPax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/num_of_pax" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/paxText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/enter_num_of_pax" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
@@ -50,23 +41,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button"
+        <ToggleButton
+            android:id="@+id/toggleButtonSVS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/no_svs" />
+            android:text="@string/buttonsvs"
+            android:textOff="@string/no_svs"
+            android:textOn="@string/svs" />
 
-        <Button
-            android:id="@+id/button2"
+        <ToggleButton
+            android:id="@+id/toggleButtonGST"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/gst" />
+            android:checked="true"
+            android:text="@string/buttongst"
+            android:textOff="@string/no_gst"
+            android:textOn="@string/gst" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/TextViewDiscount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/discount" />
@@ -76,30 +72,31 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/discountText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/enter_discount" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
+    <RadioGroup
+        android:id="@+id/RadioGroupPayment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButtonCash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/cash" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radioButtonPayNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/paynow" />
-    </LinearLayout>
+    </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -107,18 +104,19 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttonSplit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/split" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/buttonReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/reset" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -127,13 +125,13 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewTotalBill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/total_bill" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textViewDisplayBill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -146,27 +144,28 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textViewEachPays"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/each_pays" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/textViewDisplayEachPays"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/display_amount_split" />
+            android:text="@string/display_amount_each_pays" />
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/PayNowNumberText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_paynow_number_if_using_paynow" />
+            android:hint="@string/enter_number_if_using_paynow" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>

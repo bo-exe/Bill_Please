@@ -1,21 +1,21 @@
 <resources>
     <string name="app_name">Bill Please</string>
-    <string name="bill_please">Bill Please</string>
     <string name="amount">Amount</string>
-    <string name="enter_amount">Enter Amount</string>
     <string name="num_of_pax">Num of Pax</string>
-    <string name="enter_num_of_pax">Enter Num of Pax</string>
+    <string name="buttonsvs">buttonSVS</string>
     <string name="no_svs">NO SVS</string>
+    <string name="svs">SVS</string>
+    <string name="buttongst">buttonGST</string>
+    <string name="no_gst">NO GST</string>
     <string name="gst">GST</string>
-    <string name="discount">Discount (%)</string>
-    <string name="enter_discount">Enter Discount (%)</string>
+    <string name="discount">Discount(%)</string>
     <string name="cash">Cash</string>
     <string name="paynow">PayNow</string>
-    <string name="split">SPLIT</string>
-    <string name="reset">RESET</string>
+    <string name="split">Split</string>
+    <string name="reset">Reset</string>
     <string name="total_bill">Total Bill: $</string>
     <string name="display_total_bill">Display total bill</string>
     <string name="each_pays">Each Pays: $</string>
-    <string name="display_amount_split">Display Amount Split</string>
-    <string name="enter_paynow_number_if_using_paynow">Enter PayNow number (if using PayNow)</string>
+    <string name="display_amount_each_pays">Display amount each pays</string>
+    <string name="enter_number_if_using_paynow">Enter number (If using PayNow)</string>
 </resources>
